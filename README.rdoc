@@ -1,4 +1,4 @@
-== Welcome to the Force.com Canvas Ruby Example
+== Welcome to the Force.com Canvas Ruby Example.
 
 Force.com Canvas is a mashup framework for consuming third party applications within Salesforce.
 Its goal is to connect applications at a UI level instead of an API level. Force.com Canvas
