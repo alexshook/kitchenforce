@@ -24,6 +24,20 @@
 class CanvasController < ApplicationController
   # GET /canvas
   def index
+    @authStatus = params[:_sfdc_canvas_auth]
+    # Check if canvas is reporting that the user must approve the app first.
+    # This is done by adding _sfdc_canvas_auth=user_approval_required to the
+    # query string.
+    if @authStatus.eql?("user_approval_required")
+      # Retrieve consumer key from environment. We need this
+      # for oauth flow.
+      @consumerKey = ENV["CANVAS_CONSUMER_KEY"]
+      raise "No consumer key found in environment [CANVAS_CONSUMER_KEY]." if @consumerKey.blank?()
+      render "user-approval"
+    else
+      render "index"
+    end
+    
   end
 
   # POST /canvas
