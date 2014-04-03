@@ -56,7 +56,20 @@ class CanvasController < ApplicationController
 
     # Verify and decode the signed request.
     @canvasRequestJson = srHelper.verifyAndDecode()
-
+    
+    @canvasRequest = JSON.parse(@canvasRequestJson)
+    
+    location = @canvasRequest["context"]["environment"]["displayLocation"]
+      
+    # Now, we check if a template exists to handle the current display location
+    # i.e. MobileNav/index, Publisher/index, etc.  If not, just render default.
+    templateExists = template_exists?("index",location)
+    logger.debug "Canvas is being rendered in '" + location + "'. Template exists? " +(templateExists ? "yes" : "no")
+    if templateExists
+      render location+"/index"
+    else
+      render "default/index"
+    end
   end
 
 end
