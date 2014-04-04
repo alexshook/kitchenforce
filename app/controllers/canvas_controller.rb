@@ -68,7 +68,6 @@ class CanvasController < ApplicationController
     # Now, we check if a template exists to handle the current display location
     # i.e. MobileNav/index, Publisher/index, etc.  If not, just render default.
     templateExists = template_exists?("index",location)
-    logger.debug "Canvas is being rendered in '" + location + "'. Template exists? " +(templateExists ? "yes" : "no")
     if templateExists
       render location+"/index"
     else
