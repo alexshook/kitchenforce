@@ -59,6 +59,10 @@ class CanvasController < ApplicationController
     
     @canvasRequest = JSON.parse(@canvasRequestJson)
     
+    # Parse user-agent header using useragent gem.  You can use this
+    # to determine if mobile device.
+    @ua = UserAgent.parse(request.user_agent)
+    
     location = @canvasRequest["context"]["environment"]["displayLocation"]
       
     # Now, we check if a template exists to handle the current display location

@@ -25,13 +25,13 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE.
 =end %>
 <% content_for(:head) do %>
-	<%= stylesheet_link_tag "publisher-desktop" %>
+	<%= stylesheet_link_tag (@ua.mobile? ? "publisher-mobile" : "publisher-desktop") %>
 	<%= javascript_include_tag "application","publisher" %>
 	<script>
 	    if (self === top) { alert("This canvas app must be included within an iframe"); }
 		
 	    Sfdc.canvas(function() {
-	        var mobile = false; // TODO - Get Mobile
+	        var mobile = <%= @ua.mobile? %>; // TODO - Get Mobile
 	        var sr = JSON.parse('<%= raw @canvasRequestJson %>');
 	        myPublisher.init(sr, mobile);
 	        var handlers = myPublisher.handlers();
@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <div id="publisher-content">
         <div id="publisher-canvas-content">
 
-		    <%  if (true) then  %>
+		    <%  if (!@ua.mobile?) then  %>
 	            <table width='100%'>
 	                <tr>
 	                    <td><b>Name: </b><span id='name'></span></td>
