@@ -25,8 +25,8 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 POSSIBILITY OF SUCH DAMAGE.
 =end %>
 <% content_for(:head) do %>
-	<%= stylesheet_link_tag "default","tabs" %>
-	<%= javascript_include_tag "application","tabs","chatter-talk" %>
+	<%= stylesheet_link_tag (@ua.mobile? ? "default-mobile" : "default"),(@ua.mobile? ? "tabs-mobile" : "tabs") %>
+	<%= javascript_include_tag "application","chatter-talk","tabs" %>
 	<script>
 	    function resetSize(newDimensions) {
 	    	var options = newDimensions ? newDimensions : {};
