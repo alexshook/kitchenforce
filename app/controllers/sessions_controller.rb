@@ -1,8 +1,13 @@
 class SessionsController < ApplicationController
   def create
-    ENV['sfdc_token'] = request.env['omniauth.auth']['credentials']['token']
-    ENV['sfdc_instance_url'] = request.env['omniauth.auth']['instance_url']
-    render :text => request.env['omniauth.auth'].inspect
+    user = User.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_url
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url
   end
 
 end

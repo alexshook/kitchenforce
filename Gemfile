@@ -16,11 +16,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'pry-rails'
-gem 'databasedotcom'
-gem 'databasedotcom-rails'
+# gem 'databasedotcom'
+# gem 'databasedotcom-rails'
 gem 'unicorn-rails', '~> 2.1.1'
-gem 'omniauth', '~> 1.2.2'
+# gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-salesforce', '~> 1.0.3'
+gem 'restforce'
 gem 'unicorn', '~> 4.8.3'
 gem 'bcrypt'
 gem 'httparty'
