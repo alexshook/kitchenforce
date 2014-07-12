@@ -1,12 +1,8 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.find_or_create_from_auth_hash(auth_hash)
-    self.current_user = @user
-    redirect_to '/'
+    ENV['sfdc_token'] = request.env['omniauth.auth']['credentials']['token']
+    ENV['sfdc_instance_url'] = request.env['omniauth.auth']['instance_url']
+    render :text => request.env['omniauth.auth'].inspect
   end
 
-  protected
-  def auth_hash
-    request.env['omniauth.auth']
-  end
 end
