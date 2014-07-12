@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if current_user %>
+<h4>Welcome <%= current_user.name %>! | <%= link_to 'Sign Out', signout_path, method: 'delete' %></h4>
+<% else %>
+  <h4><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %></h4>
+<% end %>
 
 <%= yield %>
 
