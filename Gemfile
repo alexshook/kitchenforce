@@ -21,6 +21,8 @@ gem 'databasedotcom-rails'
 gem 'unicorn-rails', '~> 2.1.1'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-salesforce', '~> 1.0.3'
+gem 'unicorn', '~> 4.8.3'
+gem 'bcypt'
 
 group :development do
   gem 'quiet_assets', '~> 1.0.2'
@@ -31,4 +33,3 @@ group :production do
   gem 'rails_12factor', '~> 0.0.2'
 end
 
-gem 'unicorn', '~> 4.8.3'
