@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <recordTypes>
+        <label><!-- Comply with regulations --></label>
+        <name>Comply_with_regulations</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Create your business --></label>
+        <name>Create_your_business</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Open your business --></label>
+        <name>Open_your_business</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Operate your business --></label>
+        <name>Operate_your_business</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

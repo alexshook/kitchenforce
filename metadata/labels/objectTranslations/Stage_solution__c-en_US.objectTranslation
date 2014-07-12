@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Stage (solution)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stages (solution)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Crowd Capacity --></label>
+        <name>Crowd_Capacity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Festival --></label>
+        <name>Festival__c</name>
+        <relationshipLabel><!-- Stages (solutions) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Main Stage --></label>
+        <name>Main_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs Piano --></label>
+        <name>Needs_Piano__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Installs --></label>
+        <name>Special_Installs__c</name>
+        <picklistValues>
+            <masterLabel>Art Installation</masterLabel>
+            <translation><!-- Art Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extra Subwoofers</masterLabel>
+            <translation><!-- Extra Subwoofers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lasers</masterLabel>
+            <translation><!-- Lasers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Drumsets</masterLabel>
+            <translation><!-- Multiple Drumsets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pyrotechnics</masterLabel>
+            <translation><!-- Pyrotechnics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smoke Machines</masterLabel>
+            <translation><!-- Smoke Machines --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stage Manager --></label>
+        <name>Stage_Manager__c</name>
+        <relationshipLabel><!-- Stages (solutions) --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Stage (solution) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Special Info --></label>
+            <section>Special Info</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

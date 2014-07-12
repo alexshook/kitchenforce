@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Band (solution)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bands (solution)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Genre --></label>
+        <name>Genre__c</name>
+        <picklistValues>
+            <masterLabel>Bossanova</masterLabel>
+            <translation><!-- Bossanova --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronic</masterLabel>
+            <translation><!-- Electronic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indie</masterLabel>
+            <translation><!-- Indie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rock</masterLabel>
+            <translation><!-- Rock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Samba</masterLabel>
+            <translation><!-- Samba --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Has piano --></label>
+        <name>Has_piano__c</name>
+    </fields>
+    <fields>
+        <label><!-- Headliner --></label>
+        <name>Headliner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager Phone --></label>
+        <name>Manager_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Requests --></label>
+        <name>Special_Requests__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter --></label>
+        <name>Twitter__c</name>
+    </fields>
+    <layouts>
+        <layout>Band (solution) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Special Requests --></label>
+            <section>Special Requests</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
