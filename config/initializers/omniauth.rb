@@ -1,14 +1,18 @@
+require 'forcedotcom'
+
+# Set the default hostname for omniauth to send callbacks to.
+# seems to be a bug in omniauth that it drops the httpS
+# this still exists in 0.2.0
+OmniAuth.config.full_host = 'https://localhost:8080'
+
+module OmniAuth
+  module Strategies
+    #tell omniauth to load our strategy
+    autoload :Forcedotcom, 'lib/forcedotcom'
+  end
+end
+
+
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :developer unless Rails.env.production?
-  provider :salesforce, ENV['SALESFORCE_KEY'],
-                        ENV['SALESFORCE_SECRET']
-  provider OmniAuth::Strategies::SalesforceSandbox,
-         ENV['SALESFORCE_SANDBOX_KEY'],
-         ENV['SALESFORCE_SANDBOX_SECRET']
-  provider OmniAuth::Strategies::SalesforcePreRelease,
-         ENV['SALESFORCE_PRERELEASE_KEY'],
-         ENV['SALESFORCE_PRERELEASE_SECRET']
-  provider OmniAuth::Strategies::DatabaseDotCom,
-         ENV['DATABASE_DOT_COM_KEY'],
-         ENV['DATABASE_DOT_COM_SECRET']
+  provider :forcedotcom, 'consumer-key', 'consumer-secret'
 end
