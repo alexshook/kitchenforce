@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Attendee (solution)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Attendees (solution)</value>
+    </caseValues>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Festival --></label>
+        <name>Festival__c</name>
+        <relationshipLabel><!-- Attendees (solution) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase Date --></label>
+        <name>Purchase_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase Source --></label>
+        <name>Purchase_Source__c</name>
+        <picklistValues>
+            <masterLabel>3rd Party Ticket Vendor</masterLabel>
+            <translation><!-- 3rd Party Ticket Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Box Office</masterLabel>
+            <translation><!-- Box Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook</masterLabel>
+            <translation><!-- Facebook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official Website</masterLabel>
+            <translation><!-- Official Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ticket Type --></label>
+        <name>Ticket_Type__c</name>
+        <picklistValues>
+            <masterLabel>General Admission</masterLabel>
+            <translation><!-- General Admission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIP</masterLabel>
+            <translation><!-- VIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tickets purchased --></label>
+        <name>Tickets_purchased__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Spent --></label>
+        <name>Total_Spent__c</name>
+    </fields>
+    <layouts>
+        <layout>Attendee (solution) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- One attendee can purchase no more than 8 tickets! --></errorMessage>
+        <name>No_more_than_8_tickets_per_attendee</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>End_data__c</fullName>
+        <description>Last day of the festival</description>
+        <externalId>false</externalId>
+        <label>End date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>General_Admissions_Tickets_Sold__c</fullName>
+        <description>The number of General Admissions tickets sold.</description>
+        <externalId>false</externalId>
+        <label>General Admissions Tickets Sold</label>
+        <summarizedField>Attendee__c.Tickets_Purchased__c</summarizedField>
+        <summaryFilterItems>
+            <field>Attendee__c.Ticket_Type__c</field>
+            <operation>equals</operation>
+            <value>General Admission</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Attendee__c.Festival__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Maximum_Capacity__c</fullName>
+        <description>The maximum amount of people that can be present at the festival.</description>
+        <externalId>false</externalId>
+        <label>Maximum Capacity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_Capacity__c</fullName>
+        <description>The maximum amount of people that can be in the stage area of the festival.</description>
+        <externalId>false</externalId>
+        <label>Stage Capacity</label>
+        <summarizedField>Stage__c.Crowd_capacity__c</summarizedField>
+        <summaryForeignKey>Stage__c.Festival__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>First day of the festival</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Tickets_Sold__c</fullName>
+        <description>The total number of general admissions and VIP tickets sold.</description>
+        <externalId>false</externalId>
+        <formula>General_Admissions_Tickets_Sold__c  +  VIP_Tickets_Sold__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Tickets Sold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP_Tickets_Sold__c</fullName>
+        <description>The number of VIP tickets sold.</description>
+        <externalId>false</externalId>
+        <label>VIP Tickets Sold</label>
+        <summarizedField>Attendee__c.Tickets_Purchased__c</summarizedField>
+        <summaryFilterItems>
+            <field>Attendee__c.Ticket_Type__c</field>
+            <operation>equals</operation>
+            <value>VIP</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Attendee__c.Festival__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Festival</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Festival Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Festivals</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Maximum_Tickets</fullName>
+        <active>true</active>
+        <description>The maximum amount of tickets that can be sold to attendees of the festival.</description>
+        <errorConditionFormula>Total_Tickets_Sold__c &lt;= Maximum_Capacity__c</errorConditionFormula>
+        <errorMessage>There are no more tickets left to purchase, sorry!</errorMessage>
+    </validationRules>
+</CustomObject>

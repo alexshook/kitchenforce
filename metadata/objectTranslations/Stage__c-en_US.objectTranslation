@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Stage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Crowd capacity --></label>
+        <name>Crowd_capacity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Festival --></label>
+        <name>Festival__c</name>
+        <relationshipLabel><!-- Stages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Has piano --></label>
+        <name>Has_piano__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main stage --></label>
+        <name>Main_stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special equipment available --></label>
+        <name>Special_equipment_available__c</name>
+        <picklistValues>
+            <masterLabel>Extra subwoofers</masterLabel>
+            <translation><!-- Extra subwoofers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lasers</masterLabel>
+            <translation><!-- Lasers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple drumsets</masterLabel>
+            <translation><!-- Multiple drumsets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pyrotechnics</masterLabel>
+            <translation><!-- Pyrotechnics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smoke machines</masterLabel>
+            <translation><!-- Smoke machines --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stage Manager --></label>
+        <name>Stage_Manager__c</name>
+        <relationshipLabel><!-- Stages --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Stage Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Add A Set Time --></label>
+        <name>Add_A_Set_Time</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

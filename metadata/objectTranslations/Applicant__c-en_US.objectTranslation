@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Applicant</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applicants</value>
+    </caseValues>
+    <fields>
+        <help><!-- Starting with 1. --></help>
+        <label><!-- Applicant Number --></label>
+        <name>Applicant_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Type --></label>
+        <name>Business_Type__c</name>
+        <picklistValues>
+            <masterLabel>BAKERY</masterLabel>
+            <translation><!-- BAKERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAFE</masterLabel>
+            <translation><!-- CAFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOBILE FOOD VENDOR</masterLabel>
+            <translation><!-- MOBILE FOOD VENDOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RESTAURANT</masterLabel>
+            <translation><!-- RESTAURANT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>BRONX</masterLabel>
+            <translation><!-- BRONX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BROOKLYN</masterLabel>
+            <translation><!-- BROOKLYN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MANHATTAN</masterLabel>
+            <translation><!-- MANHATTAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QUEENS</masterLabel>
+            <translation><!-- QUEENS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STATEN ISLAND</masterLabel>
+            <translation><!-- STATEN ISLAND --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Applicant Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
