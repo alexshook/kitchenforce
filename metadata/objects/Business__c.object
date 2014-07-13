@@ -124,7 +124,7 @@
         <fullName>Employee_Identification_Number__c</fullName>
         <externalId>false</externalId>
         <label>Employee Identification Number</label>
-        <precision>18</precision>
+        <precision>9</precision>
         <required>false</required>
         <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>

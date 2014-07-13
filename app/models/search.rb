@@ -6,7 +6,7 @@ class Search < ActiveRecord::Base
 
   def get_location(address)
     escaped_address = address.downcase.gsub(" ", "+")
-    results = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{escaped_address}&sensor=true&key...']}")
+    results = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{escaped_address}&sensor=true&key=#{ENV['GOOGLE_GEOCODING_KEY']}")
   end
 
   def save_location(results)
@@ -14,7 +14,7 @@ class Search < ActiveRecord::Base
     self.lng = results['results'][0]['geometry']['location']['lng']
   end
 
-  def calculate_results(search_lat, search_lng, distance, search_type)
+   def calculate_results(search_lat, search_lng, distance, search_type)
     results = []
     search_lat = self.lat
     search_lng = self.lng
@@ -26,17 +26,27 @@ class Search < ActiveRecord::Base
     # client = Yelp.client
     # response = Yelp.client.search_by_coordinates(coordinates, params)
     response = Yelp.client.search("#{address}", params)
-    # return response
+    return response
 
-    business_names = []
-    response.businesses.each do |response|
-      business_names << response.name
-    end
+      # business_names << response.name.downcase.gsub(" ", "-").gsub("&", "")
+    # business_names = []
+    # response.businesses.each do |response|
+    #   business_names << response.url.gsub("http://www.yelp.com/biz/", "")
+    # end
 
-    business_information = []
-    business_names.each do |name|
-      business_information << Yelp.client.business(name)
-    end
+    # business_information = []
+    # business_names.each do |name|
+    #  if Yelp.client.business("#{name}").key?("deals")
+    #    business_information << Yelp.client.business("#{name}").deals
+    #  end
+    # end
+
+    # business_information = []
+    # business_names.each do |name|
+    #  if (Yelp.client.business("#{name}").include?('deals') != nil) == true
+    #    business_information << Yelp.client.business("#{name}").deals
+    #  end
+    # end
 
     # Auction.all.each do |auction|
     #  searched_distance = auction.haversine(search_lat, search_lng, auction.lat, auction.lng)

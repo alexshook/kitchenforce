@@ -8,9 +8,9 @@
 </head>
 <body>
 <% if current_user %>
-<h4>Welcome <%= current_user.name %>! | <%= link_to 'Sign Out', signout_path, method: 'delete' %></h4>
+<h4>Welcome <%= current_user.name %>! | <%= link_to 'Sign Out', signout_path, method: 'delete' %> <div><%= link_to 'Search', 'searches/new' %></div></h4>
 <% else %>
-  <h4><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %></h4>
+  <h4><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %> <div><%= link_to 'Search', 'searches/new' %></div></h4>
 <% end %>
 
 <%= yield %>

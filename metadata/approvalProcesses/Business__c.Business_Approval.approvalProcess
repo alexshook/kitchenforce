@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
-    <active>false</active>
+    <active>true</active>
     <allowRecall>false</allowRecall>
     <allowedSubmitters>
         <type>creator</type>
@@ -15,6 +15,10 @@
     <approvalStep>
         <allowDelegate>false</allowDelegate>
         <approvalActions>
+            <action>
+                <name>Checkbox</name>
+                <type>FieldUpdate</type>
+            </action>
             <action>
                 <name>EIN_Update</name>
                 <type>FieldUpdate</type>
@@ -37,8 +41,14 @@
         <ifCriteriaNotMet>RejectRecord</ifCriteriaNotMet>
         <label>Business Approval</label>
         <name>Business_Approval</name>
+        <rejectionActions>
+            <action>
+                <name>Failed_EIN</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
     </approvalStep>
-    <emailTemplate>unfiled$public/SalesNewCustomerEmail</emailTemplate>
+    <emailTemplate>unfiled$public/In_Review</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
@@ -47,7 +57,19 @@
             <value>false</value>
         </criteriaItems>
     </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Congrats</name>
+            <type>Alert</type>
+        </action>
+    </finalApprovalActions>
     <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Rejected</name>
+            <type>Alert</type>
+        </action>
+    </finalRejectionActions>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Business Approval</label>
     <recordEditability>AdminOrCurrentApprover</recordEditability>
