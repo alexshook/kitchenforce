@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-
+  get 'canvas', to: 'home#index'
   get 'test', to: 'home#test'
 
   get '/auth/:provider/callback', to: 'sessions#create'
