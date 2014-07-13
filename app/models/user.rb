@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   include Restforce
 
+  has_many :searches
+  has_many :businesses, through: :search_results
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
@@ -14,7 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def make_url
-    instance_url = Restforce::client.instace_url
+    # instance_url = Restforce::client.instace_url
     # HTTParty.get('https://#{instance_url}')
   end
 
