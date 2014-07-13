@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
     end
   end
 
+  def make_url
+    instance_url = Restforce::client.instace_url
+    # HTTParty.get('https://#{instance_url}')
+  end
+
 end
