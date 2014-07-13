@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
-=======
 #!/usr/bin/env rake
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
@@ -34,7 +32,7 @@ Rails.application.load_tasks
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require File.expand_path('../config/application', __FILE__)
+# require File.expand_path('../config/application', __FILE__)
 
-CanvasRuby::Application.load_tasks
->>>>>>> 73eda045d15e85ac83729b078d6ac6c2c73f1084
+# CanvasRuby::Application.load_tasks
+
