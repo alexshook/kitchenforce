@@ -19,7 +19,6 @@ class SearchesController < ApplicationController
   def show
     @search = Search.find params[:id]
     @results = @search.calculate_results(@search.lat, @search.lng, @search.distance, @search.type)
-    binding.pry
   end
 
   private

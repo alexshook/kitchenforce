@@ -22,11 +22,21 @@ class Search < ActiveRecord::Base
     address = self.address
 
     # coordinates = { latitude: search_lat, longitude: search_lng }
-    params = { term: search_type, limit: 20 }
+    params = { term: "#{search_type}", limit: 20 }
     # client = Yelp.client
     # response = Yelp.client.search_by_coordinates(coordinates, params)
     response = Yelp.client.search("#{address}", params)
-    return response
+    # return response
+
+    business_names = []
+    response.businesses.each do |response|
+      business_names << response.name
+    end
+
+    business_information = []
+    business_names.each do |name|
+      business_information << Yelp.client.business(name)
+    end
 
     # Auction.all.each do |auction|
     #   searched_distance = auction.haversine(search_lat, search_lng, auction.lat, auction.lng)
