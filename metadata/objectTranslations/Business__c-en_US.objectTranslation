@@ -9,8 +9,8 @@
         <value>Businesses</value>
     </caseValues>
     <fields>
-        <label><!-- Business Description --></label>
-        <name>Business_Description__c</name>
+        <label><!-- Approved --></label>
+        <name>Approved__c</name>
     </fields>
     <fields>
         <label><!-- Business Number --></label>
@@ -37,8 +37,47 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
         <label><!-- Email --></label>
         <name>Email__c</name>
     </fields>
+    <fields>
+        <label><!-- Employee Identification Number --></label>
+        <name>Employee_Identification_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Bronx</masterLabel>
+            <translation><!-- Bronx --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brooklyn</masterLabel>
+            <translation><!-- Brooklyn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manhattan</masterLabel>
+            <translation><!-- Manhattan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queens</masterLabel>
+            <translation><!-- Queens --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staten Island</masterLabel>
+            <translation><!-- Staten Island --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Business Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

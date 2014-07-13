@@ -6,4 +6,5 @@
     <tab>standard-ContentSearch</tab>
     <tab>standard-ContentSubscriptions</tab>
     <tab>standard-ContentFavorites</tab>
+    <tab>PermitBusinessAssociation__c</tab>
 </CustomApplication>

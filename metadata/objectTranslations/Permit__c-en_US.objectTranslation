@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Permit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Permits</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+        <relationshipLabel><!-- Permits --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>URL__c</name>
+    </fields>
+    <layouts>
+        <layout>Permit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Restaurant --></label>
+        <name>Restaurant</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

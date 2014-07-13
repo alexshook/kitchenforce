@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Get</accessMethod>
+        <canvasUrl>http://localhost:8080/canvas</canvasUrl>
+        <locations>Chatter</locations>
+        <locations>Visualforce</locations>
+        <locations>Publisher</locations>
+        <locations>ChatterFeed</locations>
+        <locations>ServiceDesk</locations>
+        <locations>OpenCTI</locations>
+        <locations>MobileNav</locations>
+        <locations>PageLayout</locations>
+    </canvasConfig>
+    <contactEmail>evobersi@gmail.com</contactEmail>
+    <iconUrl>https://kitchenforceapp.herokuapp.com/assets/icon.png</iconUrl>
+    <label>connectme</label>
+    <logoUrl>https://kitchenforceapp.herokuapp.com/assets/logo.png</logoUrl>
+    <oauthConfig>
+        <callbackUrl>http://localhost:8080/auth/salesforce/callback</callbackUrl>
+        <consumerKey>3MVG9xOCXq4ID1uH06TAhP4wcAjO92V5k9u8LU48kgZ5yMLBz2xwSskYtWWTh8IypQVOidtsqka9mN6kdwNe.</consumerKey>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+    </oauthConfig>
+</ConnectedApp>

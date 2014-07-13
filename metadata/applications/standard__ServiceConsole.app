@@ -123,6 +123,7 @@
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Knowledge</tab>
+    <tab>PermitBusinessAssociation__c</tab>
     <workspaceMappings>
         <mapping>
             <fieldName>AccountId</fieldName>
@@ -131,6 +132,9 @@
         <mapping>
             <fieldName>AccountId</fieldName>
             <tab>standard-Case</tab>
+        </mapping>
+        <mapping>
+            <tab>PermitBusinessAssociation__c</tab>
         </mapping>
         <mapping>
             <fieldName>AccountId</fieldName>

@@ -94,26 +94,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Applicant__c.Applicant_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Business_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Location__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Phone_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Attendee__c.Email__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -234,7 +214,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Business__c.Business_Description__c</field>
+        <field>Business__c.Approved__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -249,7 +229,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Business__c.Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Business__c.Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Business__c.Employee_Identification_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Business__c.Location__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -280,6 +275,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Level__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Permit_Info__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -479,6 +479,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Permit__c.URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Set_Time__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -552,28 +557,20 @@
         <field>Stage_solution__c.Stage_Manager__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Permit_Info__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <label>kitchenforce Developer</label>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Applicant__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
+    <pageAccesses>
+        <apexPage>Canvas_page</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <recordTypeVisibilities>
-        <recordType>Application__c.Create_your_business</recordType>
+        <recordType>Permit__c.Restaurant</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
-    <tabSettings>
-        <tab>Applicant__c</tab>
-        <visibility>None</visibility>
-    </tabSettings>
-    <tabSettings>
-        <tab>Application__c</tab>
-        <visibility>None</visibility>
-    </tabSettings>
     <tabSettings>
         <tab>Attendee__c</tab>
         <visibility>None</visibility>
@@ -608,6 +605,18 @@
     </tabSettings>
     <tabSettings>
         <tab>Maintenance_Ticket_solution__c</tab>
+        <visibility>None</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Nameofapp</tab>
+        <visibility>None</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>PermitBusinessAssociation__c</tab>
+        <visibility>None</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Permit__c</tab>
         <visibility>None</visibility>
     </tabSettings>
     <tabSettings>

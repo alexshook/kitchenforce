@@ -7,5 +7,8 @@
     <tab>Business__c</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
-    <tab>Application__c</tab>
+    <tab>Permit__c</tab>
+    <tab>standard-Contract</tab>
+    <tab>Nameofapp</tab>
+    <tab>PermitBusinessAssociation__c</tab>
 </CustomApplication>

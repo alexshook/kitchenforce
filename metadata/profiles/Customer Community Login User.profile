@@ -108,26 +108,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Applicant__c.Applicant_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Business_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Location__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Applicant__c.Phone_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Attendee__c.Email__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -248,7 +228,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Business__c.Business_Description__c</field>
+        <field>Business__c.Approved__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -263,7 +243,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Business__c.Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Business__c.Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Business__c.Employee_Identification_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Business__c.Location__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -295,6 +290,11 @@
         <editable>true</editable>
         <field>Contact.Level__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Permit_Info__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -493,6 +493,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Permit__c.URL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Set_Time__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -566,30 +571,13 @@
         <field>Stage_solution__c.Stage_Manager__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.Permit_Info__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Applicant__c-Applicant Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Application__c-Application Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Application__c-Application Layout</layout>
-        <recordType>Application__c.Comply_with_regulations</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Application__c-Application Layout</layout>
-        <recordType>Application__c.Create_your_business</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Application__c-Application Layout</layout>
-        <recordType>Application__c.Open_your_business</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Application__c-Application Layout</layout>
-        <recordType>Application__c.Operate_your_business</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Asset-Asset Layout</layout>
@@ -676,7 +664,14 @@
         <layout>OrderItem-Order Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Permits__c-Permit Layout</layout>
+        <layout>PermitBusinessAssociation__c-PermitBusinessAssociation Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Permit__c-Permit Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Permit__c-Permit Layout</layout>
+        <recordType>Permit__c.Restaurant</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
@@ -741,15 +736,15 @@
     <layoutAssignments>
         <layout>WorkPerformanceCycle-Performance Cycle Layout</layout>
     </layoutAssignments>
+    <pageAccesses>
+        <apexPage>Canvas_page</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>Application__c.Create_your_business</recordType>
+        <recordType>Permit__c.Restaurant</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
-    <tabVisibilities>
-        <tab>Application__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <tabVisibilities>
         <tab>Attendee__c</tab>
         <visibility>DefaultOn</visibility>
@@ -776,6 +771,18 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Maintenance_Ticket_solution__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Nameofapp</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>PermitBusinessAssociation__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Permit__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
