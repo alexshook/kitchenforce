@@ -11,10 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712184541) do
+ActiveRecord::Schema.define(version: 20140713041643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "businesses", force: true do |t|
+    t.string   "address"
+    t.string   "name"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "search_results", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "business_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "search_results", ["business_id"], name: "index_search_results_on_business_id", using: :btree
+  add_index "search_results", ["user_id", "business_id"], name: "index_search_results_on_user_id_and_business_id", unique: true, using: :btree
+  add_index "search_results", ["user_id"], name: "index_search_results_on_user_id", using: :btree
+
+  create_table "searches", force: true do |t|
+    t.string   "address"
+    t.string   "type"
+    t.float    "lat"
+    t.float    "lng"
+    t.integer  "distance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "specials", force: true do |t|
+    t.string   "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "provider"
