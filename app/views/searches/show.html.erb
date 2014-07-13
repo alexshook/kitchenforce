@@ -1,0 +1,7 @@
+<% @results.businesses.each do |result| %>
+  <h4><%= result.name %></h4>
+  <li><%= result.rating %></li>
+  <li><%= link_to "Website", result.url %></li>
+  <li><%= result.location.display_address %></li>
+  <br />
+<% end %>

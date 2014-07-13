@@ -1,0 +1,24 @@
+<%= form_for @search do |f| %>
+  <div>
+    <%= f.label :address, "Enter an address" %>
+    <br />
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <br />
+
+  <div>
+    <%= f.label :type, "Select Type" %>
+    <br />
+    <%= f.text_field :type, class: 'form-control' %>
+  </div>
+
+  <br />
+
+  <%= button_tag(type: 'submit', class: 'btn btn-default') do %>
+    Search
+  <% end %>
+
+<% end %>
+
+<br />
