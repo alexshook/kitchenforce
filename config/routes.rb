@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  resources :searches
+  resources :businesses
+  resources :specials
+  resources :users
+
   get 'test', to: 'home#test'
 
   get '/auth/:provider/callback', to: 'sessions#create'

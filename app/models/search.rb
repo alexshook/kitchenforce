@@ -1,7 +1,8 @@
 class Search < ActiveRecord::Base
+  self.inheritance_column = nil
   belongs_to :user
 
-  validates :address, :type, presence: true
+  validates :address, presence: true
 
   def get_location(address)
     escaped_address = address.downcase.gsub(" ", "+")
@@ -13,10 +14,19 @@ class Search < ActiveRecord::Base
     self.lng = results['results'][0]['geometry']['location']['lng']
   end
 
-  def calculate_results(search_lat, search_lng, distance)
+  def calculate_results(search_lat, search_lng, distance, search_type)
     results = []
     search_lat = self.lat
     search_lng = self.lng
+    search_type = self.type
+    address = self.address
+
+    # coordinates = { latitude: search_lat, longitude: search_lng }
+    params = { term: search_type, limit: 20 }
+    # client = Yelp.client
+    # response = Yelp.client.search_by_coordinates(coordinates, params)
+    response = Yelp.client.search("#{address}", params)
+    return response
 
     # Auction.all.each do |auction|
     #   searched_distance = auction.haversine(search_lat, search_lng, auction.lat, auction.lng)
@@ -27,14 +37,14 @@ class Search < ActiveRecord::Base
     # return results
   end
 
-  def get_nearby_businesses
-    parameters = { term: params[:term], limit: 40 }
-    #TODO fix the search parameters
-    results = Yelp.client.search('San Francisco', parameters)
+  def get_nearby_businesses(search_lat, search_lng)
+
+    # parameters = { term: params[:term], limit: 40 }
+    # #TODO fix the search parameters
+    # results = Yelp.client.search('San Francisco', parameters)
 
     #TODO check the query string
-    business_results = HTTParty.get('http://api.yelp.com/v2/search?term=german+food&location=Hayes&cll=37.77493,-122.419415')
-
+    # business_results = HTTParty.get('http://api.yelp.com/v2/search?term=german+food&location=Hayes&cll=37.77493,-122.419415')
   end
 
   def haversine(lat1, lng1, lat2, lng2)
@@ -55,10 +65,5 @@ class Search < ActiveRecord::Base
 
     return distance
   end
-
-end
-
-
-
 
 end

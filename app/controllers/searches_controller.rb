@@ -6,10 +6,9 @@ class SearchesController < ApplicationController
   def create
     @search = Search.new search_params
       if @search.save
+        @search.distance = 1
         results = @search.get_location(@search.address)
         @search.save_location(results)
-        # TODO double check that params[:type] is going to work
-        @type = params[:type]
         @search.save
         redirect_to @search
       else
@@ -19,12 +18,13 @@ class SearchesController < ApplicationController
 
   def show
     @search = Search.find params[:id]
-    @results = @search.calculate_results(@search.lat, @search.lng, @search.distance)
+    @results = @search.calculate_results(@search.lat, @search.lng, @search.distance, @search.type)
+    binding.pry
   end
 
   private
   def search_params
-    params.require(:search).permit(:address, :lat, :lng, :distance)
+    params.require(:search).permit(:address, :type, :lat, :lng, :distance)
   end
 
 end
