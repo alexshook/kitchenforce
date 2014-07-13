@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # Be sure to restart your server when you modify this file.
 
 Rails.application.config.session_store :cookie_store, key: '_kitchenforce_session'
-=======
 # Copyright (c) 2011, salesforce.com, inc.
 # All rights reserved.
 #
@@ -29,10 +27,10 @@ Rails.application.config.session_store :cookie_store, key: '_kitchenforce_sessio
 
 # Be sure to restart your server when you modify this file.
 
-CanvasRuby::Application.config.session_store :cookie_store, key: '_canvas_ruby_session'
+# CanvasRuby::Application.config.session_store :cookie_store, key: '_canvas_ruby_session'
 
-# Use the database for sessions instead of the cookie-based default,
-# which shouldn't be used to store highly confidential information
-# (create the session table with "rails generate session_migration")
-# CanvasRuby::Application.config.session_store :active_record_store
->>>>>>> 73eda045d15e85ac83729b078d6ac6c2c73f1084
+# # Use the database for sessions instead of the cookie-based default,
+# # which shouldn't be used to store highly confidential information
+# # (create the session table with "rails generate session_migration")
+# # CanvasRuby::Application.config.session_store :active_record_store
+# >>>>>>> 73eda045d15e85ac83729b078d6ac6c2c73f1084
