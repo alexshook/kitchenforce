@@ -22,6 +22,7 @@ gem 'restforce'
 gem 'unicorn', '~> 4.8.3'
 gem 'bcrypt'
 gem 'httparty'
+gem 'yelp', '~> 2.0.1'
 
 group :development do
   gem 'quiet_assets', '~> 1.0.2'
