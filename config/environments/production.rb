@@ -106,36 +106,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  # See everything in the log (default is :info)
-  # config.log_level = :debug
 
-  # Prepend all log lines with the following tags
-  # config.log_tags = [ :subdomain, :uuid ]
-
-  # Use a different logger for distributed setups
-  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
-
-  # Use a different cache store in production
-  # config.cache_store = :mem_cache_store
-
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
-
-  # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
-  config.assets.precompile = ['*.js', '*.css', '*.png']
-
-  # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
-
-  # Enable threaded mode
-  # config.threadsafe!
-
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation can not be found)
-  config.i18n.fallbacks = true
-
-  # Send deprecation notices to registered listeners
-  config.active_support.deprecation = :notify
-
+  config.action_dispatch.default_headers = {
+    'X-Frame-Options' => 'ALLOWALL'
+}
 end
