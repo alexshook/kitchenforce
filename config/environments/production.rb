@@ -1,4 +1,4 @@
-# Rails.application.configure do
+Rails.application.configure do
 #   # Settings specified here will take precedence over those in config/application.rb.
 
 #   # Code is not reloaded between requests.
@@ -35,7 +35,7 @@
 #   # Version of your assets, change this if you want to expire all your assets.
 #   config.assets.version = '1.0'
 
-CanvasRuby::Application.configure do
+# CanvasRuby::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
