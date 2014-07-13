@@ -12,4 +12,5 @@
     <tab>Band__c</tab>
     <tab>Set_Time__c</tab>
     <tab>Maintenance_Ticket__c</tab>
+    <tab>PermitBusinessAssociation__c</tab>
 </CustomApplication>

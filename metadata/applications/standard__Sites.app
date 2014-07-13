@@ -3,4 +3,5 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <tab>standard-Chatter</tab>
     <tab>standard-Sites</tab>
+    <tab>PermitBusinessAssociation__c</tab>
 </CustomApplication>

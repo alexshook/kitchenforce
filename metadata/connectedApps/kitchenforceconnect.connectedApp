@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Get</accessMethod>
+        <canvasUrl>https://safe-island-9070.herokuapp.com/canvas</canvasUrl>
+        <locations>Chatter</locations>
+        <locations>Visualforce</locations>
+        <locations>Publisher</locations>
+        <locations>ChatterFeed</locations>
+        <locations>ServiceDesk</locations>
+        <locations>OpenCTI</locations>
+        <locations>MobileNav</locations>
+        <locations>PageLayout</locations>
+    </canvasConfig>
+    <contactEmail>evobersi@gmail.com</contactEmail>
+    <label>kitchenforceconnect</label>
+    <oauthConfig>
+        <callbackUrl>https://safe-island-9070.herokuapp.com/auth/salesforce/callback</callbackUrl>
+        <consumerKey>3MVG9xOCXq4ID1uH06TAhP4wcAo3R5QlN5zKcbCOq2vYRb4IZ75HJ3ylk80ymi4NOQx8KuQfGqkh6W8tPbBGC</consumerKey>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+    </oauthConfig>
+</ConnectedApp>

@@ -51,15 +51,14 @@
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <fields>
-        <fullName>Business_Description__c</fullName>
+        <fullName>Approved__c</fullName>
+        <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>Business Description</label>
-        <length>32768</length>
+        <label>Approved</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Html</type>
-        <visibleLines>25</visibleLines>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Business_Number__c</fullName>
@@ -100,6 +99,16 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Email__c</fullName>
         <description>The primary email address of the business.</description>
         <externalId>false</externalId>
@@ -110,6 +119,51 @@
         <trackTrending>false</trackTrending>
         <type>Email</type>
         <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Identification_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Identification Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Manhattan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queens</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bronx</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brooklyn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Staten Island</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <label>Business</label>
     <listViews>

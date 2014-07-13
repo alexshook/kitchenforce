@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>BusinessPermitAssociation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BusinessesPermitsAssociations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business --></label>
+        <name>Business__c</name>
+        <relationshipLabel><!-- BusinessesPermitsAssociations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Permit --></label>
+        <name>Permit__c</name>
+        <relationshipLabel><!-- BusinessesPermitsAssociations --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

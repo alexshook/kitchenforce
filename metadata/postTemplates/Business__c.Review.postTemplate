@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PostTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <default>false</default>
+    <description>Your application is now under review. Your case manager will return with a decision shortly.</description>
+    <fields>Name</fields>
+    <fields>LastModifiedBy</fields>
+    <fields>Business_Type__c</fields>
+    <fields>Business_Number__c</fields>
+    <label>Review</label>
+</PostTemplate>
