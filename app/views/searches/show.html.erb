@@ -1,7 +1,10 @@
-<% @results.businesses.each do |result| %>
-  <h4><%= result.name %></h4>
-  <li><%= result.rating %></li>
-  <li><%= link_to "Website", result.url %></li>
-  <li><%= result.location.display_address %></li>
+<% @results.businesses.each do |business| %>
+  <h4><%= business.name %></h4>
+  <li><%= business.rating %></li>
+  <li><%= link_to "Website", business.url %></li>
+  <li>Address: <%= readable_address(business) %></li>
+  <%# if business.location.cross_streets != nil %>
+  <!-- <li>Cross Streets: <%#= business.location.cross_streets %></li> -->
+  <%# end %>
   <br />
 <% end %>
