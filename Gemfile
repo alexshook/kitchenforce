@@ -27,6 +27,7 @@ gem 'yelp', '~> 2.0.1'
 group :development do
   gem 'quiet_assets', '~> 1.0.2'
   gem 'dotenv-rails', '~> 0.11.1'
+  gem 'guard-livereload', require: false
 end
 
 group :production do
