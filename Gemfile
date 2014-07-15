@@ -23,8 +23,6 @@ gem 'unicorn', '~> 4.8.3'
 gem 'bcrypt'
 gem 'httparty'
 gem 'yelp', '~> 2.0.1'
-# gem 'oauth2'
-# gem 'yelpster'
 
 group :development do
   gem 'quiet_assets', '~> 1.0.2'
@@ -34,6 +32,3 @@ end
 group :production do
   gem 'rails_12factor', '~> 0.0.2'
 end
-
-# Gems used only for assets and not required
-# in production environments by default.
