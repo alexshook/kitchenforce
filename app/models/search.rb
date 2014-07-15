@@ -1,8 +1,9 @@
 class Search < ActiveRecord::Base
-  self.inheritance_column = nil
   belongs_to :user
 
   validates :address, presence: true
+
+  enum category: [ :restaurant, :bar, :cafe, :food_truck ]
 
   def get_location(address)
     escaped_address = address.downcase.gsub(" ", "+")
@@ -14,15 +15,15 @@ class Search < ActiveRecord::Base
     self.lng = results['results'][0]['geometry']['location']['lng']
   end
 
-   def calculate_results(search_lat, search_lng, distance, search_type)
+   def calculate_results(search_lat, search_lng, distance, search_category)
     results = []
     search_lat = self.lat
     search_lng = self.lng
-    search_type = self.type
+    search_category = self.category
     address = self.address
 
     # coordinates = { latitude: search_lat, longitude: search_lng }
-    params = { term: "#{search_type}", limit: 20 }
+    params = { term: "#{search_category}", limit: 20 }
     # client = Yelp.client
     # response = Yelp.client.search_by_coordinates(coordinates, params)
     response = Yelp.client.search("#{address}", params)

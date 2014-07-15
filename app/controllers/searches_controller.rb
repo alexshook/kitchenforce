@@ -1,6 +1,7 @@
 class SearchesController < ApplicationController
   def new
     @search = Search.new
+    @categories = Search.categories
   end
 
   def create
@@ -18,12 +19,12 @@ class SearchesController < ApplicationController
 
   def show
     @search = Search.find params[:id]
-    @results = @search.calculate_results(@search.lat, @search.lng, @search.distance, @search.type)
+    @results = @search.calculate_results(@search.lat, @search.lng, @search.distance, @search.category)
   end
 
   private
   def search_params
-    params.require(:search).permit(:address, :type, :lat, :lng, :distance)
+    params.require(:search).permit(:address, :type, :lat, :lng, :distance, :category)
   end
 
 end
