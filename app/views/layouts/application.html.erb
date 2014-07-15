@@ -10,14 +10,15 @@
 <body>
 
 <div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">Kitchenforce</a>
+    <%= link_to "Kitchenforce", root_path, class: 'pure-menu-heading' %>
     <ul>
 <% if current_user %>
-      <li class="pure-menu-selected"><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Search Nearby Businesses", new_search_path %></li>
       <li><%= link_to 'Sign Out', signout_path, method: 'delete' %></li>
       <li>Welcome <%= current_user.name %>!</li>
 <% else %>
+      <li><%= link_to "Home", root_path %></li>
       <li><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %></li>
       <li><%= link_to "Search Nearby Businesses", new_search_path %></li>
 <% end %>
