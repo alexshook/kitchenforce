@@ -8,11 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">Kitchenforce</a>
+    <ul>
 <% if current_user %>
-<h4>Welcome <%= current_user.name %>! | <%= link_to 'Sign Out', signout_path, method: 'delete' %> <div><%= link_to 'Search', 'searches/new' %></div></h4>
+      <li class="pure-menu-selected"><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Search Nearby Businesses", new_search_path %></li>
+      <li><%= link_to 'Sign Out', signout_path, method: 'delete' %></li>
+      <li>Welcome <%= current_user.name %>!</li>
 <% else %>
-  <h4><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %> <div><%= link_to 'Search', 'searches/new' %></div></h4>
+      <li><%= link_to 'Sign in with Salesforce', '/auth/salesforce' %></li>
+      <li><%= link_to "Search Nearby Businesses", new_search_path %></li>
 <% end %>
+    </ul>
+</div><!-- end pure-menu -->
 
 <%= yield %>
 
