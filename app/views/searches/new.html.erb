@@ -1,24 +1,51 @@
-<%= form_for @search do |f| %>
+<%= form_for @search, html: { class: 'pure-form pure-form-stacked' } do |f| %>
   <div>
     <%= f.label :address, "Enter an address" %>
     <br />
-    <%= f.text_area :address, class: 'form-control', cols: '40', rows: '3' %>
+    <%= f.text_field :address, placeholder: "350 5th Ave, New York, NY 10118", size: 40 %>
   </div>
 
   <br />
 
   <div>
-    <%= f.label :type, "Select Type" %>
+    <%= f.label :category, "What kind of business is it?" %>
     <br />
-    <%= f.text_field :type, class: 'form-control' %>
+    <%= f.select :category, options_for_select(@categories.collect { |category| [category[0].humanize, category[0]] }), {} %>
   </div>
 
   <br />
 
-  <%= button_tag(type: 'submit', class: 'btn btn-default') do %>
+  <%= button_tag(type: 'submit', class: 'pure-button pure-button-primary') do %>
     Search
   <% end %>
 
 <% end %>
 
 <br />
+<!--
+
+<form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>A Stacked Form</legend>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password">
+
+        <label for="state">State</label>
+        <select id="state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+        </select>
+
+        <label for="remember" class="pure-checkbox">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+</form>
+ -->
